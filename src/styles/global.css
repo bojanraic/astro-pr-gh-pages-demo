@@ -1,0 +1,30 @@
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0b1021;
+  color: #f4f4f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3rem 1rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+.logo {
+  width: 96px;
+  height: 96px;
+}
+
+.banner {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 8px;
+}
