@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /astro-pr-gh-pages-demo/_previews/
