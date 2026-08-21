@@ -1,17 +1,22 @@
 ---
+import '../styles/global.css';
+import logoUrl from '../assets/logo.svg';
 
+const base = import.meta.env.BASE_URL;
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+		<link rel="icon" href={`${base}favicon.ico`} />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
 	<body>
 		<h1>Astro</h1>
+		<img class="logo" src={logoUrl} alt="Astro logo (src/assets, Vite-processed)" />
+		<img class="banner" src={`${base}images/banner.svg`} alt="Banner (public/ asset)" />
 	</body>
 </html>
