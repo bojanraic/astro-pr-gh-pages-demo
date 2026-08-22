@@ -1,24 +1,21 @@
 ---
-import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
 import logoUrl from '../assets/logo.svg';
 
 const base = import.meta.env.BASE_URL;
-const isPreview = base.includes('/_previews/');
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
-		<link rel="icon" href={`${base}favicon.ico`} />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		{isPreview && <meta name="robots" content="noindex, nofollow" />}
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-		<img class="logo" src={logoUrl.src} alt="Astro logo (src/assets, Vite-processed)" />
-		<img class="banner" src={`${base}images/banner.svg`} alt="Banner (public/ asset)" />
-	</body>
-</html>
+<Layout title="Astro">
+	<h1>Astro</h1>
+	<img class="logo" src={logoUrl.src} alt="Astro logo (src/assets, Vite-processed)" />
+	<img class="banner" src={`${base}images/banner.svg`} alt="Banner (public/ asset)" />
+
+	<main>
+		<h2>Posts</h2>
+		<ul>
+			<li><a href={`${base}posts/great-wave/`}>The Great Wave off Kanagawa</a></li>
+			<li><a href={`${base}posts/earthrise/`}>Earthrise</a></li>
+			<li><a href={`${base}posts/grand-prismatic/`}>Grand Prismatic Spring</a></li>
+		</ul>
+	</main>
+</Layout>

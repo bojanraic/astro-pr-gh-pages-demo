@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import waveImg from '../../../assets/posts/great-wave.jpg';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="The Great Wave off Kanagawa">
+	<main>
+		<nav><a href={base}>&larr; Home</a></nav>
+		<h1>The Great Wave off Kanagawa</h1>
+		<img class="post-image" src={waveImg.src} alt="The Great Wave off Kanagawa, woodblock print by Hokusai" />
+		<figcaption>Katsushika Hokusai, c. 1831. Public domain, via Wikimedia Commons.</figcaption>
+		<p>
+			Katsushika Hokusai's woodblock print is the most recognizable work to come out
+			of the ukiyo-e movement. It captures a moment of scale: three fishing boats
+			dwarfed by a cresting wave, with Mount Fuji rendered small in the background.
+		</p>
+		<p>
+			The composition's sense of vastness echoes a very different subject: see
+			<a href={`${base}posts/earthrise/`}>Earthrise</a>, a photograph taken from
+			lunar orbit that gave humanity its first view of Earth as a small, fragile
+			whole.
+		</p>
+		<p>
+			For a landscape captured on Earth rather than above it, see
+			<a href={`${base}posts/grand-prismatic/`}>Grand Prismatic Spring</a>.
+		</p>
+	</main>
+</Layout>

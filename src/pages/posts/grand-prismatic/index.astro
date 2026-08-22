@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import springImg from '../../../assets/posts/grand-prismatic.jpg';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Grand Prismatic Spring">
+	<main>
+		<nav><a href={base}>&larr; Home</a></nav>
+		<h1>Grand Prismatic Spring</h1>
+		<img class="post-image" src={springImg.src} alt="Aerial view of Grand Prismatic Spring, Yellowstone National Park" />
+		<figcaption>Grand Prismatic Spring and Midway Geyser Basin, Yellowstone National Park. Public domain, via Wikimedia Commons.</figcaption>
+		<p>
+			The largest hot spring in the United States, Grand Prismatic Spring owes its
+			concentric bands of color to heat-loving microorganisms living at different
+			temperatures across the pool. From the air, the pattern resembles an eye.
+		</p>
+		<p>
+			Seen from far enough away, terrestrial features start to look like the view
+			from orbit &mdash; see <a href={`${base}posts/earthrise/`}>Earthrise</a> for
+			the inverse: Earth itself seen small and whole.
+		</p>
+		<p>
+			And for a very different kind of natural spectacle rendered by human hands,
+			see <a href={`${base}posts/great-wave/`}>The Great Wave off Kanagawa</a>.
+		</p>
+	</main>
+</Layout>

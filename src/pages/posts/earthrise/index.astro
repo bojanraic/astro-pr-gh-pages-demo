@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import earthriseImg from '../../../assets/posts/earthrise.jpg';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Earthrise">
+	<main>
+		<nav><a href={base}>&larr; Home</a></nav>
+		<h1>Earthrise</h1>
+		<img class="post-image" src={earthriseImg.src} alt="Earthrise, photographed from lunar orbit by the Apollo 8 crew" />
+		<figcaption>William Anders / NASA, Apollo 8, December 24, 1968. Public domain.</figcaption>
+		<p>
+			Taken by astronaut William Anders as Apollo 8 emerged from behind the Moon,
+			this photograph is often credited with shifting public perception of Earth
+			as a single, bounded system rather than an endless backdrop.
+		</p>
+		<p>
+			That shift in scale rhymes with an aerial view taken much closer to home:
+			<a href={`${base}posts/grand-prismatic/`}>Grand Prismatic Spring</a>, where
+			distance turns a hot spring into an abstract pattern of color.
+		</p>
+		<p>
+			For a wave-scale view of nature's power from the ground, see
+			<a href={`${base}posts/great-wave/`}>The Great Wave off Kanagawa</a>.
+		</p>
+	</main>
+</Layout>
