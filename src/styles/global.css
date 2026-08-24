@@ -28,3 +28,22 @@ h1 {
   width: 100%;
   border-radius: 8px;
 }
+
+main {
+  max-width: 640px;
+  width: 100%;
+}
+
+.post-image {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+nav a {
+  color: #8ab4f8;
+}
+
+figcaption {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
