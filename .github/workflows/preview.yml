@@ -32,7 +32,7 @@ jobs:
       - if: github.event.action != 'closed'
         run: npm run build
         env:
-          ASTRO_BASE: /astro-pr-gh-pages-demo/_previews/pr-${{ github.event.number }}/
+          ASTRO_BASE: /_previews/pr-${{ github.event.number }}/
 
       - uses: rossjrw/pr-preview-action@v1
         with:
