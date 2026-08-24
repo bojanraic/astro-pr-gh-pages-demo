@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-export const SITE_ROOT = '/astro-pr-gh-pages-demo/';
+export const SITE_ROOT = '/';
 export const PREVIEW_SEGMENT = process.env.PREVIEW_SEGMENT ?? '_previews';
 
 const prNumber = process.env.PR_NUMBER;
@@ -13,6 +13,6 @@ export const LOGO_COLOR = prNumber ? LOGO_COLORS[Number(prNumber) % LOGO_COLORS.
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://bojanraic.github.io',
+  site: 'https://bojan.link',
   base,
 });
