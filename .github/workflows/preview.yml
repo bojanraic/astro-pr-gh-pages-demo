@@ -38,8 +38,26 @@ jobs:
           PR_NUMBER: ${{ github.event.number }}
 
       - uses: rossjrw/pr-preview-action@v1
+        id: preview
         with:
           source-dir: ./dist/
           preview-branch: gh-pages
           umbrella-dir: ${{ env.PREVIEW_SEGMENT }}
-          qr-code: true
+          qr-code: false
+          comment: false
+
+      - if: steps.preview.outputs.deployment-action == 'deploy'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: pr-preview
+          message: |
+            Preview: ${{ steps.preview.outputs.preview-url }}
+
+            Built from `${{ github.sha }}` at ${{ steps.preview.outputs.action-start-time }}.
+
+      - if: steps.preview.outputs.deployment-action == 'remove'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: pr-preview
+          message: |
+            Preview removed because the pull request was closed.
